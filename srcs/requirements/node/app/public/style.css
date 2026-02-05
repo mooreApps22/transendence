@@ -1,0 +1,33 @@
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	font-family: "Press Start 2P";
+	font-size: 24px;
+	background-color: gray;
+}
+div{
+	background-color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+	min-height: 100vh;
+	padding: 40px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+input{
+	font-family: "Press Start 2P";
+}
+button{
+	font-family: "Press Start 2P";
+	background-color gray;
+}
