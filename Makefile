@@ -11,7 +11,7 @@ DB_DIR =	$(DATA_DIR)/mariadb
 include $(ENVFILE)
 export
 
-all: tls data
+all: tls data secrets
 	docker compose $(ENV) -f $(YAM) up -d --build
 up:
 	docker compose $(ENV) -f $(YAM) up --build
@@ -62,7 +62,7 @@ secrets:$(SECRETS)
 
 $(SECRETS):
 	@mkdir -p secrets
-	@touch $@
+	@test -f $@ || openssl rand -base64 32 > $@
 
 data:
 	@mkdir -p $(DB_DIR)
